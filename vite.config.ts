@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import path from 'path';
+import typescript from '@rollup/plugin-typescript'
+
+// const resolvePath = (str: string) => path.resolve(__dirname, str)
 
 export default defineConfig({
     build: {
+        sourcemap: true,
         lib: {
             entry: path.resolve(__dirname, 'src/main.ts'),
             name: 'EmailMimeParser',
@@ -19,7 +23,11 @@ export default defineConfig({
                 globals: {
                     vue: 'Vue'
                 }
-            }
+            },
+            plugins: [
+                typescript()
+            ]
+
         }
     }
 })

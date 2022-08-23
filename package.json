@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/email-mime-parser.umd.js",
   "module": "./dist/email-mime-parser.js",
   "exports": {
@@ -22,6 +24,8 @@
     "vite": "^3.0.7"
   },
   "dependencies": {
-    "@types/node": "^18.7.9"
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/node": "^18.7.9",
+    "tslib": "^2.4.0"
   }
 }
