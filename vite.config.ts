@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import path from 'path';
 import typescript from '@rollup/plugin-typescript'
-
+import eslint from 'vite-plugin-eslint'
 // const resolvePath = (str: string) => path.resolve(__dirname, str)
 
 export default defineConfig({
+    plugins: [eslint()],
     build: {
         sourcemap: true,
         lib: {
