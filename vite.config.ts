@@ -26,7 +26,9 @@ export default defineConfig({
                 }
             },
             plugins: [
-                typescript()
+                typescript({
+                    exclude: ['**/*.test.ts']
+                })
             ]
 
         }
